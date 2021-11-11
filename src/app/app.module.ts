@@ -8,10 +8,14 @@ import {DocumentService} from "./document.service";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from "@angular/material/select";
+import {unifiedFactory} from "./unified-factory";
+import { MarkdownComponent } from './markdown/markdown.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MarkdownComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,10 @@ import {MatSelectModule} from "@angular/material/select";
   providers: [
     DataService,
     DocumentService,
+    {
+      provide: 'unified',
+      useFactory: unifiedFactory,
+    }
   ],
   bootstrap: [AppComponent]
 })

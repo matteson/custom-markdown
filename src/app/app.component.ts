@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
 
   constructor(
     private dataService: DataService,
-    private documentService: DocumentService
+    private documentService: DocumentService,
   ) {
   }
 
