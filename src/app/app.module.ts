@@ -10,12 +10,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from "@angular/material/select";
 import {unifiedFactory} from "./unified-factory";
 import { MarkdownComponent } from './markdown/markdown.component';
+import {BlockComponent} from "./block/block.component";
+import {InlineComponent} from "./inline/inline.component";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MarkdownComponent
+    MarkdownComponent,
+    BlockComponent,
+    InlineComponent,
   ],
   imports: [
     BrowserModule,

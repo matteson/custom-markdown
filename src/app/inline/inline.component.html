@@ -1,0 +1,11 @@
+<ng-container *ngFor="let child of children">
+  <ng-container [ngSwitch]="child.type">
+
+    <!-- Plain text -->
+    <ng-container *ngSwitchCase="'text'">
+      {{ text_helper(child.value) }}
+    </ng-container>
+
+    <!-- Other types go here emph, strong, html, etc. -->
+  </ng-container>
+</ng-container>

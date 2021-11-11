@@ -1,0 +1,33 @@
+<ng-container *ngFor="let child of children">
+  <ng-container [ngSwitch]="child.type">
+    <!-- Headings -->
+    <ng-container *ngSwitchCase="'heading'">
+      <div
+        class="mat-h1"
+        *ngIf="child.depth === 1"
+        [inline]="child"
+      ></div>
+      <div
+        class="mat-h2"
+        *ngIf="child.depth === 2"
+        [inline]="child"
+      ></div>
+      <div
+        class="mat-h3"
+        *ngIf="child.depth === 3"
+        [inline]="child"
+      ></div>
+    </ng-container>
+
+    <!-- Paragraph -->
+    <p
+      *ngSwitchCase="'paragraph'"
+      [inline]="child"
+    ></p>
+
+    <!-- Can be added: -->
+    <!-- Lists -->
+    <!-- Tables -->
+    <!-- Etc. -->
+  </ng-container>
+</ng-container>

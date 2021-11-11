@@ -18,4 +18,5 @@ export class MarkdownComponent {
   constructor(
     @Inject('unified') private unified: FrozenProcessor
   ) { }
+
 }

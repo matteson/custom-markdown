@@ -3,7 +3,7 @@ const fixture_1 = `
 ## Subtitle
 A nice little chunk of text.
 
-<CUSTOM_MARKDOWN>
+<CUSTOM_MARKDOWN></CUSTOM_MARKDOWN>
 `;
 
 const fixture_2 = 'foo bar baz';
