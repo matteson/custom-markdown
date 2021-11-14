@@ -1,5 +1,6 @@
 import {Component, OnInit, Input, Inject} from '@angular/core';
 import {FrozenProcessor} from "unified";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'app-markdown',
@@ -16,7 +17,7 @@ export class MarkdownComponent {
   }
 
   constructor(
-    @Inject('unified') private unified: FrozenProcessor
+    @Inject('unified') private unified: FrozenProcessor,
   ) { }
 
 }

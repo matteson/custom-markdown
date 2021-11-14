@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
   data: {custom: string}[] = [];
   documents: string[] = [];
 
-  selected_data = 0;
+  selected_data
   selected_document = 0;
 
   constructor(
@@ -23,11 +23,17 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.selected_data = this.dataService.selected_data;
+
     this.data = this.dataService.get_data();
     this.documents = this.documentService.get_documents();
   }
 
-  jsonDoc(selected: number) {
-    return JSON.stringify(this.documents[selected]);
+  set_data() {
+    this.dataService.set_selected(this.selected_data);
+  }
+
+  get_data() {
+    return this.dataService.get_selected_data();
   }
 }

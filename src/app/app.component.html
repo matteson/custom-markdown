@@ -5,7 +5,7 @@
         Choose data and template
       </div>
       <div fxFlex="30">
-        <mat-select [(value)]="selected_data">
+        <mat-select [(value)]="selected_data" (valueChange)="set_data()">
           <mat-option *ngFor="let selected of data; let i = index;" [value]="i">Data: {{i}}</mat-option>
         </mat-select>
         <mat-select [(value)]="selected_document">
@@ -23,7 +23,7 @@
       </div>
       <div>
         <div class="mat-h2">Data:</div>
-        <div>{{ data[selected_data] | json }}</div>
+        <div>{{ get_data()| json }}</div>
       </div>
     </div>
   </div>
